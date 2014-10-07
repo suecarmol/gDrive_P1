@@ -13,7 +13,7 @@
       var clientId = '376419829615-u424kk24147la36g9bbtj89vkc6qu90g.apps.googleusercontent.com';
 
       // Scope to use to access user's photos.
-      var scope = ['https://www.googleapis.com/auth/photos'];
+      var scope = ['https://www.googleapis.com/auth/docs'];
 
       var pickerApiLoaded = false;
       var oauthToken;
@@ -50,9 +50,11 @@
       function createPicker() {
         if (pickerApiLoaded && oauthToken) {
           var picker = new google.picker.PickerBuilder().
-              addView(google.picker.ViewId.PHOTOS).
+              enableFeature(google.picker.Feature.NAV_HIDDEN).
+          	  enableFeature(google.picker.Feature.MULTISELECT_ENABLED).
+              addView(new google.picker.DocsUploadView()).
               setOAuthToken(oauthToken).
-              setDeveloperKey(developerKey).
+              //setDeveloperKey(developerKey).
               setCallback(pickerCallback).
               build();
           picker.setVisible(true);
