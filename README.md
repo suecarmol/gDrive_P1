@@ -25,6 +25,6 @@ Manual: Acceso a Google Drive por medio de Javascript
 
 8. Dentro de la configuración del archivo de javascript, copiar y pegar el ClientID (del servidor o de localhost, dependiendo de en donde estés desarrollando) en una variable de configuración para que todo funcione de manera satisfactoria. 
 
-
+![](https://github.com/suecarmol/gDrive_P1/blob/master/screencaps/ScreenCap4.png)
 
 NOTA: Recuerda que debes cambiar el ClientID si se quiere hacer la aplicación sobre otro servidor, o si se quiere pasar el contenido de localhost al servidor o viceversa. 
